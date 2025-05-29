@@ -1,116 +1,93 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Myxc-SMP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myxc-Craft Server</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('Myxc-Craft.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
       color: white;
-      text-align: center;
     }
-
-    nav {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
+    .hero {
+      background-image: url('https://media.discordapp.net/attachments/1221461646212464641/1371178600849608926/IMG_1157.jpg?ex=68394355&is=6837f1d5&hm=5114399c056e0d070aab54c0648d7bf676e8ceb68882f46a705ba22c628c5196&=&format=webp');
+      background-size: cover;
+      background-position: center;
     }
-
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .nav li a:hover {
-      background: #4fc3f7;
-      border-radius: 8px;
-    }
-
-    .shop-redirect {
-      margin: 4rem auto;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      width: fit-content;
-      border-radius: 1rem;
-    }
-
-    .shop-redirect input {
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      border: none;
-      margin-right: 1rem;
-    }
-
-    .shop-redirect button {
-      padding: 0.5rem 1rem;
-      background: #4fc3f7;
-      border: none;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .shop-redirect button:hover {
-      background: #03a9f4;
+    input, textarea {
+      color: black;
     }
   </style>
 </head>
-<body>
-
-  <nav>
-    <ul class="nav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#shop">Shop</a></li>
-    </ul>
+<body class="font-sans">
+  <!-- Navigation Bar -->
+  <nav class="bg-black text-white text-sm py-2 px-4 flex justify-center space-x-6 fixed w-full z-50">
+    <a href="#" class="hover:text-green-400 transition">Startseite</a>
+    <a href="#features" class="hover:text-green-400 transition">Features</a>
+    <a href="#spieler" class="hover:text-green-400 transition">Spielerzahlen</a>
+    <a href="#discord" class="hover:text-green-400 transition">Discord</a>
+    <a href="#kontakt" class="hover:text-green-400 transition">Kontakt</a>
+    <a href="#regeln" class="hover:text-green-400 transition">Regeln</a>
+    <a href="#shop" class="hover:text-green-400 transition">Shop</a>
   </nav>
 
-  <section id="home">
-    <h1>Willkommen auf Myxc-SMP</h1>
-    <p>Erlebe dein Abenteuer auf unserem Minecraft-Server!</p>
+  <header class="hero h-screen flex flex-col justify-center items-center text-center pt-16">
+    <h1 class="text-5xl font-bold" data-aos="fade-down">Willkommen bei Myxc-Craft</h1>
+    <p class="mt-4 text-xl" data-aos="fade-up">Dein Abenteuer beginnt hier!</p>
+    <button class="mt-8 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full text-lg transition" data-aos="zoom-in">
+      Server beitreten: myxc-craft.net
+    </button>
+  </header>
+
+  <section id="features" class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Server Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg" data-aos="flip-left">⚔️ PvP & Events</div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg" data-aos="flip-up">💰 Wirtschaft & Shops</div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg" data-aos="flip-right">🏰 Bau & Survival</div>
+      </div>
+    </div>
   </section>
 
-  <section id="features">
-    <h2>Server-Features</h2>
-    <ul>
-      <li>✅ Survival mit Community</li>
-      <li>💸 Wirtschaftssystem</li>
-      <li>⚔️ PvP-Arenen</li>
-      <li>🎁 Belohnungen und Events</li>
-    </ul>
+  <section id="spieler" class="py-16 px-4 bg-gray-900" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">🔢 Spielerzahlen</h2>
+      <p class="text-lg">Aktuell online: <span class="font-bold">24</span> Spieler</p>
+      <p class="text-sm text-gray-400 mt-2">(Wird alle 5 Minuten aktualisiert)</p>
+    </div>
   </section>
 
-  <div class="shop-redirect" id="shop">
-    <h2>Shop</h2>
-    <p>Gib deinen Minecraft-Namen ein und unterstütze unseren Server mit Paysafe-Karten!</p>
-    <input type="text" id="mcname" placeholder="Minecraft Name eingeben">
-    <button onclick="goToShop()">Zum Shop</button>
-  </div>
+  <section id="discord" class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">📢 Tritt unserem Discord bei</h2>
+      <p class="mb-4">Chatte mit anderen Spielern, nimm an Events teil und bleib auf dem Laufenden.</p>
+      <a href="https://discord.gg/your-discord-link" target="_blank" class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-full text-lg transition">Jetzt beitreten</a>
+    </div>
+  </section>
 
+  <section id="kontakt" class="py-16 px-4 bg-gray-800" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">📬 Kontaktiere uns</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Dein Name" class="w-full p-3 rounded-lg" required>
+        <input type="email" placeholder="Deine E-Mail" class="w-full p-3 rounded-lg" required>
+        <textarea placeholder="Deine Nachricht" rows="5" class="w-full p-3 rounded-lg" required></textarea>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full">Absenden</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-8 text-gray-300">
+    &copy; 2025 Myxc-Craft | Alle Rechte vorbehalten
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    function goToShop() {
-      const name = document.getElementById("mcname").value;
-      if (!name) return alert("Bitte gib deinen Minecraft-Namen ein!");
-      window.open(`https://deinshop.com/?ign=${encodeURIComponent(name)}`, "_blank");
-    }
+    AOS.init();
   </script>
-
 </body>
 </html>
+
